@@ -70,3 +70,51 @@ Answer/Note:
 Answer/Note:
 - You can type the first 7 characters of a commit ID to uniquely identify it.
 - 'git show <commit-id>' displays all details of that commit: author, date, commit message, and changes.
+
+## Step 15a: Add a new file
+Answer/Note:
+- 'touch src/file3.py' creates a new empty file.
+- 'git add' stages it for commit.
+- 'git commit' saves it into Git history.
+
+## Step 15b: Update README.md
+Answer/Note:
+- Adding new content to an existing file creates changes.
+- 'git add' stages the changes, and 'git commit' saves them.
+- Each commit represents a snapshot of the repository at that moment.
+
+Stretch Task 1:
+- Using `git rm` deletes the file and stages the deletion automatically.
+- After running `git status`, the file shows as deleted and ready to commit.
+- Committing finalizes the deletion in the Git history.
+
+### Stretch Task 2: Delete a file using the OS
+Answer/Note:
+- Deleting a file using the OS removes it from the working directory only.
+- `git status` shows the file as "deleted" but it is **not staged** for commit yet.
+- Unlike `git rm`, Git did not automatically stage the deletion.
+
+### Stretch Task 3: Stage and commit an OS-deleted file
+Answer/Note:
+- After deleting a file via the OS, it is not staged automatically.
+- Using `git add -A` or `git rm <file>` stages the deletion.
+- `git commit` then records the deletion in Git history.
+- Difference vs `git rm`: `git rm` deletes and stages in one step; OS delete requires a separate stage command.
+
+### Stretch Task 4: Rename a file using git mv
+Answer/Note:
+- `git mv <oldname> <newname>` renames a file and stages it in one step.
+- `git status` shows the file as renamed.
+- `git commit` finalizes the rename in Git history.
+
+### Stretch Task 5: Rename using OS vs git mv
+Answer/Note:
+- Renaming a file via the OS shows as deleted + untracked in `git status`.
+- Committing now records a deletion and addition, not an explicit rename.
+- Git can detect renames later in diffs using similarity, but `git status` will not show "rename".
+- To have a proper rename staged, use `git mv`.
+
+### Stretch Task 6: Show the most recent 3 commits
+Answer/Note:
+- Use `git log -3 --oneline` or `git log --max-count=3 --oneline` to display only the last three commits.
+- This is useful to quickly see recent changes without scrolling through full history.
