@@ -24,3 +24,8 @@ We intentionally modified feature1.py on master to create a conflict for the reb
 
 This simulates real-world scenarios where multiple branches edit the same file.
 Now both branches have conflicting changes in the same file.
+
+**Files included in this folder (moved here):**
+- file4.py
+- feature1.py
+- conflict_file.py 

@@ -78,3 +78,7 @@
 - Soft: moves HEAD but keeps staged changes.
 - Mixed: moves HEAD and unstages changes (default).
 - Hard: resets HEAD, staging area, and working directory to the anchor commit.
+
+**Files included in this folder:**
+- file3.py — created and committed as part of the Undoing Changes exercise.
+- file5.py — created for the stretch task and used in reset/checkout examples.
